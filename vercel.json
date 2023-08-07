@@ -1,0 +1,19 @@
+{
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/backend.py"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/template/$1"
+    }
+  ],
+  "env": {
+    "FLASK_ENV": "production"
+  }
+}
